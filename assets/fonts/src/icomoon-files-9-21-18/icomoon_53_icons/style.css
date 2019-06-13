@@ -1,0 +1,36 @@
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.icon-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+
+.icon-big5-logo {
+  width: 7.37109375em;
+}
+
+.icon-big5-logo-square {
+  width: 1.2451171875em;
+}
+
+.icon-cart-active {
+  width: 1.099609375em;
+}
+
+.icon-cart {
+  width: 1.099609375em;
+}
+
+.icon-menu {
+  width: 1.25em;
+}

@@ -1,0 +1,271 @@
+.icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-image: url(sprite.svg);
+}
+.icon-big5-logo {
+  width: 236px;
+  height: 32px;
+  background-position: 0 0;
+}
+.icon-big5-logo-square {
+  width: 40px;
+  height: 32px;
+  background-position: -288px 0;
+}
+.icon-cart-active {
+  width: 35px;
+  height: 32px;
+  background-position: -336px 0;
+}
+.icon-cart {
+  width: 35px;
+  height: 32px;
+  background-position: -384px 0;
+}
+.icon-facebook {
+  width: 32px;
+  height: 32px;
+  background-position: -432px 0;
+}
+.icon-instagram {
+  width: 32px;
+  height: 32px;
+  background-position: -480px 0;
+}
+.icon-search {
+  width: 32px;
+  height: 32px;
+  background-position: -528px 0;
+}
+.icon-menu {
+  width: 40px;
+  height: 32px;
+  background-position: -576px 0;
+}
+.icon-pinterest {
+  width: 32px;
+  height: 32px;
+  background-position: -624px 0;
+}
+.icon-twitter {
+  width: 32px;
+  height: 32px;
+  background-position: -672px 0;
+}
+.icon-youtube {
+  width: 32px;
+  height: 32px;
+  background-position: -720px 0;
+}
+.icon-arrow-down {
+  width: 32px;
+  height: 32px;
+  background-position: 0 -48px;
+}
+.icon-arrow-down-thin {
+  width: 32px;
+  height: 32px;
+  background-position: -48px -48px;
+}
+.icon-arrow-up {
+  width: 32px;
+  height: 32px;
+  background-position: -96px -48px;
+}
+.icon-arrow-up-thin {
+  width: 32px;
+  height: 32px;
+  background-position: -144px -48px;
+}
+.icon-arrow-left {
+  width: 32px;
+  height: 32px;
+  background-position: -192px -48px;
+}
+.icon-arrow-right {
+  width: 32px;
+  height: 32px;
+  background-position: -240px -48px;
+}
+.icon-close {
+  width: 32px;
+  height: 32px;
+  background-position: -288px -48px;
+}
+.icon-dot {
+  width: 32px;
+  height: 32px;
+  background-position: -336px -48px;
+}
+.icon-error {
+  width: 32px;
+  height: 32px;
+  background-position: -384px -48px;
+}
+.icon-info {
+  width: 32px;
+  height: 32px;
+  background-position: -432px -48px;
+}
+.icon-locator-small {
+  width: 32px;
+  height: 32px;
+  background-position: -480px -48px;
+}
+.icon-minus-circle {
+  width: 32px;
+  height: 32px;
+  background-position: -528px -48px;
+}
+.icon-minus {
+  width: 32px;
+  height: 32px;
+  background-position: -576px -48px;
+}
+.icon-plus-circle {
+  width: 32px;
+  height: 32px;
+  background-position: -624px -48px;
+}
+.icon-plus {
+  width: 32px;
+  height: 32px;
+  background-position: -672px -48px;
+}
+.icon-print {
+  width: 32px;
+  height: 32px;
+  background-position: -720px -48px;
+}
+.icon-valid {
+  width: 32px;
+  height: 32px;
+  background-position: 0 -96px;
+}
+.icon-wishlist {
+  width: 32px;
+  height: 32px;
+  background-position: -48px -96px;
+}
+.icon-lock {
+  width: 32px;
+  height: 32px;
+  background-position: -96px -96px;
+}
+.icon-cross {
+  width: 32px;
+  height: 32px;
+  background-position: -144px -96px;
+}
+.icon-radio-checked {
+  width: 32px;
+  height: 32px;
+  background-position: -192px -96px;
+}
+.icon-radio-unchecked {
+  width: 32px;
+  height: 32px;
+  background-position: -240px -96px;
+}
+.icon-plus-thin {
+  width: 32px;
+  height: 32px;
+  background-position: 0 -144px;
+}
+.icon-triangle-down {
+  width: 32px;
+  height: 32px;
+  background-position: -48px -144px;
+}
+.icon-triangle-up {
+  width: 32px;
+  height: 32px;
+  background-position: -96px -144px;
+}
+.icon-dollar {
+  width: 32px;
+  height: 32px;
+  background-position: -144px -144px;
+}
+.icon-call-made {
+  width: 32px;
+  height: 32px;
+  background-position: -192px -144px;
+}
+.icon-gift-card {
+  width: 32px;
+  height: 32px;
+  background-position: -240px -144px;
+}
+.icon-check {
+  width: 32px;
+  height: 32px;
+  background-position: -288px -144px;
+}
+.icon-checkbox-checked {
+  width: 32px;
+  height: 32px;
+  background-position: -336px -144px;
+}
+.icon-checkbox-unchecked {
+  width: 32px;
+  height: 32px;
+  background-position: -384px -144px;
+}
+.icon-envelope {
+  width: 32px;
+  height: 32px;
+  background-position: -432px -144px;
+}
+.icon-question-answer {
+  width: 32px;
+  height: 32px;
+  background-position: -480px -144px;
+}
+.icon-star {
+  width: 32px;
+  height: 32px;
+  background-position: -528px -144px;
+}
+.icon-locator {
+  width: 32px;
+  height: 32px;
+  background-position: -576px -144px;
+}
+.icon-person {
+  width: 32px;
+  height: 32px;
+  background-position: -624px -144px;
+}
+.icon-pin-drop {
+  width: 32px;
+  height: 32px;
+  background-position: -672px -144px;
+}
+.icon-play-circle-filled {
+  width: 32px;
+  height: 32px;
+  background-position: -720px -144px;
+}
+.icon-play-circle {
+  width: 32px;
+  height: 32px;
+  background-position: 0 -192px;
+}
+.icon-minus-thin {
+  width: 32px;
+  height: 32px;
+  background-position: -48px -192px;
+}
+.icon-star-empty {
+  width: 32px;
+  height: 32px;
+  background-position: -96px -192px;
+}
+.icon-star-half {
+  width: 32px;
+  height: 32px;
+  background-position: -144px -192px;
+}
+
