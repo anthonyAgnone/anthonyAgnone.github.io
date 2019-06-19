@@ -131,7 +131,7 @@ body {
   padding-top: 9px;
   height: 100%;
   --n: 1;
-  width: 100%;
+  min-width: 100%;
   width: calc(var(--n) * 115px);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -214,6 +214,10 @@ body {
   margin: 0;
   padding: 0;
   font-size: 1.1em;
+}
+
+.container .itemDetails .selectBox .arrow {
+  margin-top: 6px;
 }
 
 .container .itemDetails .colorSection {
