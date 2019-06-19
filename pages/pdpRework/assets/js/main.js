@@ -1,4 +1,10 @@
-// Bread Crumbs
+/**
+ *
+ *
+ * BREADCRUMBS
+ *
+ *
+ */
 
 var breadCrumbLinks = $('.breadCrumbs').find('a')
 
@@ -11,7 +17,12 @@ breadCrumbLinks.each(function(i, el) {
   }
 })
 
-// Main Img component and slider
+/**
+ *
+ * MAIN IMG COMPONENT SLIDER
+ *
+ *
+ */
 
 // define variables.
 var altImagesContainer = $('.imagesWrap'),
@@ -19,10 +30,10 @@ var altImagesContainer = $('.imagesWrap'),
   imagesCount = allImages.length,
   currentImage = 0,
   mainImage = $('.imageWrapper img'),
-  altCount = $('.altCount')
-
-//update the css variable for proper width management of the container.
-altImagesContainer.css('width', imagesCount * 115)
+  altCount = $('.altCount'),
+  mainImageEl = document.getElementById('mainImage'),
+  mc = new Hammer(mainImageEl),
+  listOfShoes
 
 /**
  * Take each alternate image and provide a data point to signify which position they are in.
@@ -34,9 +45,6 @@ allImages.each(function(i, el) {
     updateSlider($(this).data('position'))
   })
 })
-
-// initial updating of the alternate image text.
-updateAltText(currentImage)
 
 /**
  * Initiates the draggable alternate images component.
@@ -69,19 +77,16 @@ if (window.innerWidth <= 115 * imagesCount) {
   })
 }
 
-//not production. This lists all of the images the server would provide us after the ajax calls.
-var listOfShoes = [
-  './assets/img/mainShoe.jpg',
-  './assets/img/mainShoe.jpg',
-  './assets/img/secondShoe.jpg',
-  './assets/img/mainShoe.jpg',
-  './assets/img/secondShoe.jpg',
-  './assets/img/mainShoe.jpg',
-  './assets/img/secondShoe.jpg',
-  './assets/img/mainShoe.jpg',
-  './assets/img/secondShoe.jpg',
-  './assets/img/mainShoe.jpg'
-]
+/**
+ * Creates the event listener for swiping on the main image
+ */
+mc.on('swipe', function(ev) {
+  if (ev.direction == 2) {
+    handleSwipeLeft()
+  } else if (ev.direction == 4) {
+    handleSwipeRight()
+  }
+})
 
 /**
  * Updates the Main Image on the page.
@@ -134,63 +139,46 @@ function handleSwipeLeft() {
  */
 function handleSwipeRight(event) {
   if (currentImage > 0) {
-    currentImage += 1
+    currentImage -= 1
     updateMainImage(currentImage)
     updateAltText(currentImage)
     updateSlider(currentImage)
   }
 }
 
-var startPoint = 0
-var traveled = 0
+/**
+ * Initilizes the base values and formats the page;
+ */
+function init() {
+  // initial updating of the alternate image text.
+  updateAltText(currentImage)
 
-var mainWrapper = document.getElementById('imageWrapper')
+  //update the css variable for proper width management of the container.
+  altImagesContainer.css('width', imagesCount * 115)
 
-mainWrapper.addEventListener('touchstart', handleTouchStart, false)
-mainWrapper.addEventListener('touchmove', handleTouchMove, false)
-
-var xDown = null
-var yDown = null
-
-function getTouches(evt) {
-  return (
-    evt.touches || evt.originalEvent.touches // browser API
-  ) // jQuery
+  listOfShoes = [
+    './assets/img/mainShoe.jpg',
+    './assets/img/mainShoe.jpg',
+    './assets/img/secondShoe.jpg',
+    './assets/img/mainShoe.jpg',
+    './assets/img/secondShoe.jpg',
+    './assets/img/mainShoe.jpg',
+    './assets/img/secondShoe.jpg',
+    './assets/img/mainShoe.jpg',
+    './assets/img/secondShoe.jpg',
+    './assets/img/mainShoe.jpg'
+  ]
 }
 
-function handleTouchStart(evt) {
-  console.log('touch started')
-  const firstTouch = getTouches(evt)[0]
-  xDown = firstTouch.clientX
-  yDown = firstTouch.clientY
-}
+init()
 
-function handleTouchMove(evt) {
-  console.log('touch moving')
-  if (!xDown || !yDown) {
-    return
-  }
-
-  var xUp = evt.touches[0].clientX
-  var yUp = evt.touches[0].clientY
-
-  var xDiff = xDown - xUp
-  var yDiff = yDown - yUp
-
-  if (Math.abs(xDiff) > Math.abs(yDiff)) {
-    /*most significant*/
-    if (xDiff > 0) {
-      console.log('swiped left')
-    } else {
-      console.log('swiped right')
-    }
-  }
-  /* reset values */
-  xDown = null
-  yDown = null
-}
-
-// Price
+/**
+ *
+ *
+ * PRICE
+ *
+ *
+ */
 
 var price = '30.00'
 
