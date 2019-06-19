@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <title>PDP rework</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
@@ -13,37 +17,86 @@
   </head>
   <body>
     <div class="container">
+      <nav>
+        <div class="topNav">
+          <p>Free Shipping on 50+ and Free In-Store Returns</p>
+        </div>
+        <div class="bottomNav"></div>
+      </nav>
       <div class="breadCrumbs">
         <a href="#">Footwear</a>
         <a href="#">Women's Footwear</a>
         <a href="#">Running </a>
       </div>
       <div class="imageWrapper">
-        <img
-          src="https://uat.big5dev.com/catalogimage/img/product/rwd/xlarge/5385_15147_0004_015_xlarge_02.jpg"
-          alt=""
-        />
+        <img src="./assets/img/mainShoe.jpg" alt="" />
         <p class="saleTag">SALE</p>
-      </div>
-      <div class="altImages">
         <div class="altCount">
           x of x
         </div>
+      </div>
+      <div class="altImages">
         <div class="imagesWrap">
-          <img src="https://via.placeholder.com/150" alt="" />
-          <img src="https://via.placeholder.com/150" alt="" />
-          <img src="https://via.placeholder.com/150" alt="" />
-          <img src="https://via.placeholder.com/150" alt="" />
-          <img src="https://via.placeholder.com/150" alt="" />
-          <img src="https://via.placeholder.com/150" alt="" />
-          <img src="https://via.placeholder.com/150" alt="" />
-          <img src="https://via.placeholder.com/150" alt="" />
-          <img src="https://via.placeholder.com/150" alt="" />
-          <img src="https://via.placeholder.com/150" alt="" />
+          <img src="./assets/img/thumb1.jpg" alt="" />
+          <img src="./assets/img/thumb1.jpg" alt="" />
+          <img src="./assets/img/thumb2.jpg" alt="" />
+          <img src="./assets/img/thumb1.jpg" alt="" />
+          <img src="./assets/img/thumb2.jpg" alt="" />
+          <img src="./assets/img/thumb1.jpg" alt="" />
+          <img src="./assets/img/thumb2.jpg" alt="" />
+          <img src="./assets/img/thumb1.jpg" alt="" />
+          <img src="./assets/img/thumb2.jpg" alt="" />
+          <img src="./assets/img/thumb1.jpg" alt="" />
         </div>
+      </div>
+      <div class="itemDetails">
+        <div class="colorSection">
+          <div class="selectBox">
+            <div class="selectTitle">
+              <h2>Color</h2>
+            </div>
+            <div class="selection">
+              <h2>Blue</h2>
+            </div>
+            <div class="arrow"><i class="fas fa-chevron-down"></i></div>
+          </div>
+        </div>
+        <div class="sizeSection">
+          <div class="selectBox">
+            <div class="selectTitle">
+              <h2>Size</h2>
+            </div>
+            <div class="selection">
+              <h2>6</h2>
+            </div>
+            <div class="arrow"><i class="fas fa-chevron-down"></i></div>
+          </div>
+        </div>
+        <div class="lastSection">
+          <div class="selectBox">
+            <div class="selectTitle">
+              <h2>Qty</h2>
+            </div>
+            <div class="selection">
+              <h2>1</h2>
+            </div>
+            <div class="arrow"><i class="fas fa-chevron-down"></i></div>
+          </div>
+          <button>ADD TO CART</button>
+        </div>
+      </div>
+      <div class="price">
+        <h2></h2>
+        <span></span>
       </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script
+      src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+      integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/draggableTouch.js"></script>
     <script src="./assets/js/main.js"></script>
   </body>
 </html>
