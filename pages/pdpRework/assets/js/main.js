@@ -22,7 +22,7 @@ var altImagesContainer = $('.imagesWrap'),
   altCount = $('.altCount')
 
 //update the css variable for proper width management of the container.
-altImagesContainer.css('--n', imagesCount)
+altImagesContainer.css('width', imagesCount * 115)
 
 /**
  * Take each alternate image and provide a data point to signify which position they are in.
@@ -96,9 +96,13 @@ function updateMainImage(newImage) {
  * @param {int} position - This represents the image position of the slider relative to the far left image
  */
 function updateSlider(position) {
+  altImagesContainer.css('transition', 'left 0.3s ease')
   altImagesContainer.css('left', position * -101)
   updateAltText(position)
   updateMainImage(position)
+  setTimeout(function() {
+    altImagesContainer.css('transition', 'left 0s ease')
+  }, 300)
 }
 
 /**
@@ -128,13 +132,62 @@ function handleSwipeLeft() {
  * Updates  the image, the slider and the text associated with it if it is not
  * the first image.
  */
-function handleSwipeRight() {
+function handleSwipeRight(event) {
   if (currentImage > 0) {
     currentImage += 1
     updateMainImage(currentImage)
     updateAltText(currentImage)
     updateSlider(currentImage)
   }
+}
+
+var startPoint = 0
+var traveled = 0
+
+var mainWrapper = document.getElementById('imageWrapper')
+
+mainWrapper.addEventListener('touchstart', handleTouchStart, false)
+mainWrapper.addEventListener('touchmove', handleTouchMove, false)
+
+var xDown = null
+var yDown = null
+
+function getTouches(evt) {
+  return (
+    evt.touches || evt.originalEvent.touches // browser API
+  ) // jQuery
+}
+
+function handleTouchStart(evt) {
+  console.log('touch started')
+  const firstTouch = getTouches(evt)[0]
+  xDown = firstTouch.clientX
+  yDown = firstTouch.clientY
+}
+
+function handleTouchMove(evt) {
+  console.log('touch moving')
+  if (!xDown || !yDown) {
+    return
+  }
+
+  var xUp = evt.touches[0].clientX
+  var yUp = evt.touches[0].clientY
+
+  var xDiff = xDown - xUp
+  var yDiff = yDown - yUp
+
+  if (Math.abs(xDiff) > Math.abs(yDiff)) {
+    /*most significant*/
+    if (xDiff > 0) {
+      console.log('swiped left')
+    } else {
+      console.log('swiped right')
+    }
+  }
+  /* reset values */
+  xDown = null
+  yDown = null
 }
 
 // Price
