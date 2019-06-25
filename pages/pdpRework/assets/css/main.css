@@ -428,8 +428,8 @@ h6 {
   height: 100%;
   width: 100%;
   z-index: 200;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(48%, transparent), color-stop(87%, white));
-  background-image: linear-gradient(transparent 48%, white 87%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, transparent), color-stop(65%, white));
+  background-image: linear-gradient(transparent 0, white 65%);
 }
 
 .container .reviewSection .seeFull {
