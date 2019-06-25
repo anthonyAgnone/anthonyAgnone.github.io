@@ -344,16 +344,16 @@ h6 {
   margin-right: 8px;
 }
 
-.container .reviews {
+.container .reviewsHeader {
   width: 100%;
   margin-top: 20px;
 }
 
-.container .reviews .reviewTitle {
+.container .reviewsHeader .reviewTitle {
   padding: 0 10px;
 }
 
-.container .reviews .reviewTitle button {
+.container .reviewsHeader .reviewTitle button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -370,7 +370,7 @@ h6 {
   background-color: transparent;
 }
 
-.container .reviews .reviewTitle button div {
+.container .reviewsHeader .reviewTitle button div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -386,53 +386,84 @@ h6 {
           align-items: center;
 }
 
-.container .reviews .reviewTitle button div p {
+.container .reviewsHeader .reviewTitle button div p {
   margin-right: 1rem;
   font-weight: 700;
 }
 
-.container .reviews .reviewTitle button div img {
+.container .reviewsHeader .reviewTitle button div img {
   width: 32%;
   height: auto;
   -ms-flex-negative: 1;
       flex-shrink: 1;
 }
 
-.container .reviews .reviewTitle button .fas {
+.container .reviewsHeader .reviewTitle button .reviewArrow {
   color: #4367a3;
   margin-left: auto;
   -ms-flex-negative: 1;
       flex-shrink: 1;
   font-weight: 700;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+.container .reviewsHeader .reviewTitle button .reviewArrow.expanded {
+  -webkit-transform: rotateZ(180deg);
+          transform: rotateZ(180deg);
 }
 
 .container .reviewSection {
   margin-top: 10px;
   width: 100%;
-  padding: 10px 20px;
   position: relative;
-  height: 230px;
-  width: 100%;
+  max-height: 0;
   overflow: hidden;
+  -webkit-transition: max-height 1s ease;
+  transition: max-height 1s ease;
 }
 
-.container .reviewSection .titleEl {
+.container .reviewSection.expanded {
+  max-height: 4900px;
+}
+
+.container .reviewSection .review {
+  padding: 10px 20px;
+  max-height: 200px;
+  position: relative;
+  padding-bottom: 50px;
+  overflow: hidden;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+.container .reviewSection .review .titleEl {
   font-weight: 700;
   margin-bottom: 10px;
 }
 
-.container .reviewSection .overlay {
+.container .reviewSection .review .descriptionEl {
+  max-height: 165px;
+  -webkit-transition: max-height 0.6s ease;
+  transition: max-height 0.6s ease;
+  overflow: hidden;
+}
+
+.container .reviewSection .review .overlay {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
+  height: 250px;
   width: 100%;
   z-index: 200;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, transparent), color-stop(65%, white));
   background-image: linear-gradient(transparent 0, white 65%);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  opacity: 1;
 }
 
-.container .reviewSection .seeFull {
+.container .reviewSection .review .seeFull {
   position: absolute;
   top: 170px;
   left: 50%;
@@ -442,5 +473,39 @@ h6 {
   border-radius: 19px;
   color: #fff;
   z-index: 300;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.container .reviewSection .review.expanded {
+  max-height: 900px;
+  position: relative;
+}
+
+.container .reviewSection .review.expanded:after {
+  width: 100%;
+  position: absolute;
+  bottom: 25px;
+  height: 2px;
+  background-color: #3f3f3f;
+  opacity: 75%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  content: '';
+}
+
+.container .reviewSection .review.expanded .descriptionEl {
+  max-height: 1900px;
+}
+
+.container .reviewSection .review.expanded .overlay {
+  max-height: 900px;
+  opacity: 0;
+}
+
+.container .reviewSection .review.expanded .seeFull {
+  opacity: 0;
+  pointer-events: none;
 }
 /*# sourceMappingURL=main.css.map */

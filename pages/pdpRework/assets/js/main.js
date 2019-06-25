@@ -195,3 +195,31 @@ $('.price span').text(formattedPrice[1])
 $('.originalPrice').text(originalPrice)
 $('.savedAmount').text(savedAmount)
 $('.endSale').text(endDate)
+
+/**
+ *
+ *
+ * Reviews
+ *
+ *
+ */
+
+$('.revealReviews').on('click', function() {
+  $('.reviewSection').toggleClass('expanded')
+  $('.reviewArrow').toggleClass('expanded')
+  var allExpandedEl = $('.expanded')
+  allExpandedEl.each(function(i, el) {
+    if (!$(el).hasClass('reviewSection')) {
+      $(el).removeClass('expanded')
+    }
+  })
+})
+
+$('.seeFull').on('click', function() {
+  $('.reviewSection')
+    .find('.overlay')
+    .toggleClass('expanded')
+  $(this)
+    .closest('.review')
+    .toggleClass('expanded')
+})
