@@ -207,19 +207,14 @@ $('.endSale').text(endDate)
 $('.revealReviews').on('click', function() {
   $('.reviewSection').toggleClass('expanded')
   $('.reviewArrow').toggleClass('expanded')
-  var allExpandedEl = $('.expanded')
-  allExpandedEl.each(function(i, el) {
-    if (!$(el).hasClass('reviewSection')) {
-      $(el).removeClass('expanded')
-    }
-  })
+  $(this).toggleClass('expanded')
 })
 
 $('.seeFull').on('click', function() {
-  $('.reviewSection')
+  $('.descriptionSection')
     .find('.overlay')
     .toggleClass('expanded')
   $(this)
-    .closest('.review')
+    .closest('.description')
     .toggleClass('expanded')
 })

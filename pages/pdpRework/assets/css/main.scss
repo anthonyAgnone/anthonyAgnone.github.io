@@ -279,6 +279,7 @@ h6 {
         border-width: 2px 0;
         border-color: #e7e7e7;
         background-color: transparent;
+
         div {
           display: flex;
           justify-content: flex-start;
@@ -308,29 +309,24 @@ h6 {
       }
     }
   }
-  .reviewSection {
+  .descriptionSection {
+    border-width: 2px 0 0 0;
+    border-color: #e7e7e7;
+    background-color: transparent;
     margin-top: 10px;
     width: 100%;
     position: relative;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 1s ease;
-
-    &.expanded {
-      max-height: 4900px;
-    }
-    .review {
+    .description {
       padding: 10px 20px;
       max-height: 200px;
       position: relative;
-      padding-bottom: 50px;
       overflow: hidden;
       transition: all 0.6s ease;
       .titleEl {
         font-weight: 700;
         margin-bottom: 10px;
       }
-      .descriptionEl {
+      .descriptionText {
         max-height: 165px;
         transition: max-height 0.6s ease;
         overflow: hidden;
@@ -360,17 +356,6 @@ h6 {
       &.expanded {
         max-height: 900px;
         position: relative;
-        &:after {
-          width: 100%;
-          position: absolute;
-          bottom: 25px;
-          height: 2px;
-          background-color: #3f3f3f;
-          opacity: 75%;
-          left: 50%;
-          transform: translateX(-50%);
-          content: '';
-        }
         .descriptionEl {
           max-height: 1900px;
         }
@@ -381,6 +366,89 @@ h6 {
         .seeFull {
           opacity: 0;
           pointer-events: none;
+        }
+      }
+    }
+  }
+
+  .wishListHeader {
+    width: 100%;
+    margin-top: 20px;
+    .withListTitle {
+      padding: 0 10px;
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        border-style: solid;
+        border-width: 2px 0;
+        border-color: #e7e7e7;
+        background-color: transparent;
+        div {
+          display: flex;
+          justify-content: flex-start;
+          flex-grow: 1;
+          margin: 0.6rem 0;
+          align-items: center;
+          p {
+            margin-right: 1rem;
+            font-weight: 700;
+          }
+          img {
+            width: 32%;
+            height: auto;
+            flex-shrink: 1;
+          }
+        }
+        .wishListArrow {
+          color: #4367a3;
+          margin-left: auto;
+          flex-shrink: 1;
+          font-weight: 700;
+          transition: all 0.6s ease;
+          &.expanded {
+            transform: rotateZ(180deg);
+          }
+        }
+      }
+    }
+  }
+  .osListHeader {
+    width: 100%;
+    margin-top: 20px;
+    .osListTitle {
+      padding: 0 10px;
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        div {
+          display: flex;
+          justify-content: flex-start;
+          flex-grow: 1;
+          margin: 0.6rem 0;
+          align-items: center;
+          p {
+            margin-right: 1rem;
+            font-weight: 700;
+          }
+          img {
+            width: 32%;
+            height: auto;
+            flex-shrink: 1;
+          }
+        }
+        .osListArrow {
+          color: #4367a3;
+          margin-left: auto;
+          flex-shrink: 1;
+          font-weight: 700;
+          transition: all 0.6s ease;
+          &.expanded {
+            transform: rotateZ(180deg);
+          }
         }
       }
     }
