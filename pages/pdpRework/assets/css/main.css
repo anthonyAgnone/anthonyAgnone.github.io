@@ -33,11 +33,18 @@ nav .bottomNav {
 html,
 body {
   width: 100%;
-  height: 100%;
-  background-size: 100%;
-  background-position-y: -37px;
-  background-repeat: no-repeat;
   overflow-x: hidden;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
 }
 
 .container {
@@ -149,11 +156,7 @@ body {
   width: 100%;
   margin-top: 0;
   position: relative;
-  top: -7px;
-}
-
-.container .itemDetails .colorSection {
-  margin-bottom: 20px;
+  padding-top: 9px;
 }
 
 .container .itemDetails .selectBox {
@@ -167,7 +170,7 @@ body {
           align-items: center;
   border: 1px solid #000;
   border-radius: 25px;
-  margin: 1em auto;
+  margin: 0 auto;
 }
 
 .container .itemDetails .selectBox .selectTitle {
@@ -264,24 +267,180 @@ body {
 
 .container .price {
   padding-left: 10px;
-  padding-top: 10px;
+  padding-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 37%;
 }
 
-.container .price h2 {
+.container .price.sale {
+  color: #b40202;
+}
+
+.container .price .currentPrice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .price .currentPrice h2 {
   margin: 0;
   padding: 0;
   font-size: 2.1em;
 }
 
-.container .price span {
-  padding-left: 2px;
-  padding-top: 2px;
-  font-size: 1.5em;
+.container .price .currentPrice span {
+  font-size: 1.3em;
+  padding: 2px 0 0 1px;
+}
+
+.container .price .originalPrice {
+  text-decoration: line-through;
+  color: #717171;
+}
+
+.container .saleDetail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #fff;
+  background-color: #b40202;
+  padding: 8px 10px;
+  margin-top: 1rem;
+}
+
+.container .findItem {
+  width: 75%;
+  margin: 14px auto 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .findItem .btn {
+  width: 86%;
+  background-color: transparent;
+  border: 2px solid #357f2a;
+  color: #357f2a;
+  border-radius: 19px;
+  padding: 3px 4px;
+}
+
+.container .findItem .btn .fa {
+  margin-right: 8px;
+}
+
+.container .reviews {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.container .reviews .reviewTitle {
+  padding: 0 10px;
+}
+
+.container .reviews .reviewTitle button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  border-style: solid;
+  border-width: 2px 0;
+  border-color: #e7e7e7;
+  background-color: transparent;
+}
+
+.container .reviews .reviewTitle button div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin: 0.6rem 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .reviews .reviewTitle button div p {
+  margin-right: 1rem;
+  font-weight: 700;
+}
+
+.container .reviews .reviewTitle button div img {
+  width: 32%;
+  height: auto;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+}
+
+.container .reviews .reviewTitle button .fas {
+  color: #4367a3;
+  margin-left: auto;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  font-weight: 700;
+}
+
+.container .reviewSection {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px 20px;
+  position: relative;
+  height: 230px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.container .reviewSection .titleEl {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.container .reviewSection .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 200;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(48%, transparent), color-stop(87%, white));
+  background-image: linear-gradient(transparent 48%, white 87%);
+}
+
+.container .reviewSection .seeFull {
+  position: absolute;
+  top: 170px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #003da3;
+  border-radius: 19px;
+  color: #fff;
+  z-index: 300;
 }
 /*# sourceMappingURL=main.css.map */

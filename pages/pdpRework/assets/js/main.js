@@ -181,9 +181,17 @@ init()
  *
  */
 
-var price = '30.00'
+var price = 30.0,
+  originalPrice = parseFloat(49.99).toFixed(2),
+  savedAmount = parseFloat(originalPrice - price).toFixed(2),
+  endDate = '4/10/19'
 
-var formattedPrice = price.split('.')
+var formattedPrice = parseFloat(price)
+  .toFixed(2)
+  .split('.')
 
 $('.price h2').text('$' + formattedPrice[0])
 $('.price span').text(formattedPrice[1])
+$('.originalPrice').text(originalPrice)
+$('.savedAmount').text(savedAmount)
+$('.endSale').text(endDate)
