@@ -199,7 +199,7 @@ $('.endSale').text(endDate)
 /**
  *
  *
- * Reviews
+ * Description
  *
  *
  */
@@ -218,3 +218,96 @@ $('.seeFull').on('click', function() {
     .closest('.description')
     .toggleClass('expanded')
 })
+
+/**
+ *
+ *
+ * Suggested Items
+ *
+ *
+ */
+
+var $allSections = $('.suggestedItems'),
+  pos = 0,
+  $suggestedContainer = $('.suggestedContainer'),
+  $indicators = $('.indicators'),
+  computedStyle = window.getComputedStyle(document.querySelector('.suggestedContainer')),
+  matrix = new WebKitCSSMatrix(computedStyle.transform)
+
+function attachIndicators() {
+  $allSections.each(function(i) {
+    if (i == pos) {
+      $indicators.append('<button class="indicator activeInd"><i class="fas fa-circle"></i></button>')
+    } else {
+      $indicators.append('<button class="indicator inActiveInd"><i class="fas fa-circle"></i></button>')
+    }
+  })
+}
+
+function colorIndicators() {
+  $('.indicator').each(function(i, el) {
+    $(el)
+      .removeClass('activeInd')
+      .addClass('inActiveInd')
+    if (i == pos) $(el).addClass('activeInd')
+  })
+}
+
+function moveCarousel(direction) {
+  matrix = matrix.translate(direction, 0)
+  document.querySelector('.suggestedContainer').style.transform = matrix.toString()
+}
+
+/**
+ *
+ * The controls slide the carousel by the width of the parent (which is 100% width)
+ * 105 due to padding when initializing the width of the container. Gives each indicator
+ * a data position so you can track which slide to go to
+ *
+ **/
+function attachControls() {
+  $('.leftA').on('click', function() {
+    if (pos > 0) {
+      pos -= 1
+      moveCarousel($suggestedContainer.parent().width() + 20)
+      colorIndicators()
+    }
+  })
+  $('.rightA').on('click', function() {
+    if (pos < $allSections.length - 1) {
+      pos += 1
+      moveCarousel(-$suggestedContainer.parent().width() - 20)
+      colorIndicators()
+    }
+  })
+  $('.indicator').on('click', function() {
+    var oldPos = pos
+    pos = $(this).data('position')
+    if (pos > oldPos) {
+      moveCarousel(-window.innerWidth * (pos - oldPos) - 20)
+      colorIndicators()
+    } else if (oldPos > pos) {
+      moveCarousel(window.innerWidth * (oldPos - pos) + 20)
+      colorIndicators()
+    }
+  })
+}
+
+/**
+ *
+ * Initializes the Carousel with the dynamic width, attaches the slide indicators and eventHandlers to buttons
+ * 105 due to padding when initializing the width of the container. Gives each indicator
+ * a data position so you can track which slide to go to
+ *
+ **/
+
+function initCarousel() {
+  $suggestedContainer.css('width', $allSections.length * 105 + 'vw')
+  attachIndicators()
+  attachControls()
+  $('.indicator').each(function(i, el) {
+    $(el).data('position', i)
+  })
+}
+
+initCarousel()

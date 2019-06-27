@@ -46,6 +46,14 @@ h6 {
   padding: 0;
 }
 
+$a-tags: 'a, a:active, a:hover, a:visited';
+$a-tags-hover: 'a:active, a:hover';
+
+#{$a-tags} {
+  color: #000;
+  text-decoration: none;
+}
+
 .container {
   width: 100%;
   min-height: 100vh;
@@ -452,5 +460,93 @@ h6 {
         }
       }
     }
+  }
+  .suggestedSection {
+    width: 100%;
+    background-color: #f7f7f7;
+    h2 {
+      font-weight: 700;
+      padding: 10px;
+      padding-bottom: 0;
+    }
+    .suggestedContainer {
+      display: flex;
+      padding: 20px 10px;
+      height: 100%;
+      transform: translateX(0);
+      transition: all 0.6s ease;
+      .suggestedItems {
+        padding: 10px 18px 0 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        overflow: hidden;
+        flex: 1 0 auto;
+        width: 100vw;
+        margin-right: 20px;
+
+        .item {
+          flex-basis: calc(50% - 5px);
+          padding-bottom: 30px;
+          a {
+            :visited {
+              color: #000;
+            }
+            text-decoration: none;
+            outline: none;
+            img {
+              width: 100%;
+              height: auto;
+            }
+            .itemTitle {
+              margin-bottom: 10px;
+              .brand {
+                font-weight: 700;
+              }
+            }
+            .YMALprice {
+              .sale {
+                color: #b40202;
+                font-weight: 700;
+              }
+              .originalPrice {
+                text-decoration: line-through;
+                font-weight: 700;
+              }
+              .normalPrice {
+                font-weight: 700;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .suggestedSelector {
+      width: 70%;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+      .arrow {
+        color: #003da3;
+      }
+      .indicators {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.7em;
+        align-content: center;
+        width: 50%;
+        height: 100%;
+        .inActiveInd {
+          color: #ccc;
+        }
+        .activeInd {
+          color: #003da3;
+        }
+      }
+    }
+  }
+  .reviewsSection {
+    padding: 20px 10px;
   }
 }

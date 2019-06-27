@@ -47,6 +47,11 @@ h6 {
   padding: 0;
 }
 
+a, a:active, a:hover, a:visited {
+  color: #000;
+  text-decoration: none;
+}
+
 .container {
   width: 100%;
   min-height: 100vh;
@@ -622,5 +627,129 @@ h6 {
 .container .osListHeader .osListTitle button .osListArrow.expanded {
   -webkit-transform: rotateZ(180deg);
           transform: rotateZ(180deg);
+}
+
+.container .suggestedSection {
+  width: 100%;
+  background-color: #f7f7f7;
+}
+
+.container .suggestedSection h2 {
+  font-weight: 700;
+  padding: 10px;
+  padding-bottom: 0;
+}
+
+.container .suggestedSection .suggestedContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px 10px;
+  height: 100%;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+.container .suggestedSection .suggestedContainer .suggestedItems {
+  padding: 10px 18px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: hidden;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  width: 100vw;
+  margin-right: 20px;
+}
+
+.container .suggestedSection .suggestedContainer .suggestedItems .item {
+  -ms-flex-preferred-size: calc(50% - 5px);
+      flex-basis: calc(50% - 5px);
+  padding-bottom: 30px;
+}
+
+.container .suggestedSection .suggestedContainer .suggestedItems .item a {
+  text-decoration: none;
+  outline: none;
+}
+
+.container .suggestedSection .suggestedContainer .suggestedItems .item a :visited {
+  color: #000;
+}
+
+.container .suggestedSection .suggestedContainer .suggestedItems .item a img {
+  width: 100%;
+  height: auto;
+}
+
+.container .suggestedSection .suggestedContainer .suggestedItems .item a .itemTitle {
+  margin-bottom: 10px;
+}
+
+.container .suggestedSection .suggestedContainer .suggestedItems .item a .itemTitle .brand {
+  font-weight: 700;
+}
+
+.container .suggestedSection .suggestedContainer .suggestedItems .item a .YMALprice .sale {
+  color: #b40202;
+  font-weight: 700;
+}
+
+.container .suggestedSection .suggestedContainer .suggestedItems .item a .YMALprice .originalPrice {
+  text-decoration: line-through;
+  font-weight: 700;
+}
+
+.container .suggestedSection .suggestedContainer .suggestedItems .item a .YMALprice .normalPrice {
+  font-weight: 700;
+}
+
+.container .suggestedSection .suggestedSelector {
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+}
+
+.container .suggestedSection .suggestedSelector .arrow {
+  color: #003da3;
+}
+
+.container .suggestedSection .suggestedSelector .indicators {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 0.7em;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  width: 50%;
+  height: 100%;
+}
+
+.container .suggestedSection .suggestedSelector .indicators .inActiveInd {
+  color: #ccc;
+}
+
+.container .suggestedSection .suggestedSelector .indicators .activeInd {
+  color: #003da3;
+}
+
+.container .reviewsSection {
+  padding: 20px 10px;
 }
 /*# sourceMappingURL=main.css.map */
