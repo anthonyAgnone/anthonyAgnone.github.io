@@ -54,6 +54,11 @@ $a-tags-hover: 'a:active, a:hover';
   text-decoration: none;
 }
 
+button {
+  background: transparent;
+  border: none;
+}
+
 .container {
   width: 100%;
   min-height: 100vh;
@@ -61,6 +66,7 @@ $a-tags-hover: 'a:active, a:hover';
   padding-bottom: 5em;
   overflow-x: hidden;
   // opacity: 0.5;
+
   .breadCrumbs {
     width: 100%;
     display: flex;
@@ -82,6 +88,7 @@ $a-tags-hover: 'a:active, a:hover';
       }
     }
   }
+
   .imageWrapper {
     margin-top: 5px;
     width: 100%;
@@ -118,6 +125,7 @@ $a-tags-hover: 'a:active, a:hover';
       font-style: italic;
     }
   }
+
   .altImages {
     position: relative;
     height: 100px;
@@ -219,6 +227,7 @@ $a-tags-hover: 'a:active, a:hover';
       }
     }
   }
+
   .price {
     padding-left: 10px;
     padding-top: 20px;
@@ -247,6 +256,7 @@ $a-tags-hover: 'a:active, a:hover';
       color: #717171;
     }
   }
+
   .saleDetail {
     display: flex;
     width: 100%;
@@ -256,6 +266,7 @@ $a-tags-hover: 'a:active, a:hover';
     padding: 8px 10px;
     margin-top: 1rem;
   }
+
   .findItem {
     width: 75%;
     margin: 14px auto 0 auto;
@@ -273,6 +284,7 @@ $a-tags-hover: 'a:active, a:hover';
       }
     }
   }
+
   .reviewsHeader {
     width: 100%;
     margin-top: 20px;
@@ -317,6 +329,7 @@ $a-tags-hover: 'a:active, a:hover';
       }
     }
   }
+
   .descriptionSection {
     border-width: 2px 0 0 0;
     border-color: #e7e7e7;
@@ -346,7 +359,7 @@ $a-tags-hover: 'a:active, a:hover';
         height: 250px;
         width: 100%;
         z-index: 200;
-        background-image: linear-gradient(transparent 0, white 65%);
+        background-image: linear-gradient(transparent 0, white 55%);
         transition: all 0.3s ease;
         opacity: 1;
       }
@@ -360,6 +373,7 @@ $a-tags-hover: 'a:active, a:hover';
         color: #fff;
         z-index: 300;
         transition: all 0.5s ease;
+        padding: 5px 20px;
       }
       &.expanded {
         max-height: 900px;
@@ -422,6 +436,7 @@ $a-tags-hover: 'a:active, a:hover';
       }
     }
   }
+
   .osListHeader {
     width: 100%;
     margin-top: 20px;
@@ -432,6 +447,8 @@ $a-tags-hover: 'a:active, a:hover';
         align-items: center;
         justify-content: space-between;
         width: 100%;
+        background: transparent;
+        border: none;
         div {
           display: flex;
           justify-content: flex-start;
@@ -461,6 +478,7 @@ $a-tags-hover: 'a:active, a:hover';
       }
     }
   }
+
   .suggestedSection {
     width: 100%;
     background-color: #f7f7f7;
@@ -527,10 +545,16 @@ $a-tags-hover: 'a:active, a:hover';
       display: flex;
       justify-content: space-between;
       margin: 0 auto;
+      .button {
+        background: transparent;
+        border: none;
+      }
       .arrow {
         color: #003da3;
       }
       .indicators {
+        background: transparent;
+        border: none;
         display: flex;
         justify-content: space-between;
         font-size: 0.7em;

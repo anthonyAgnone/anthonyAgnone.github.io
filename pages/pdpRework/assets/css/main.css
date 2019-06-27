@@ -52,6 +52,11 @@ a, a:active, a:hover, a:visited {
   text-decoration: none;
 }
 
+button {
+  background: transparent;
+  border: none;
+}
+
 .container {
   width: 100%;
   min-height: 100vh;
@@ -455,8 +460,8 @@ a, a:active, a:hover, a:visited {
   height: 250px;
   width: 100%;
   z-index: 200;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, transparent), color-stop(65%, white));
-  background-image: linear-gradient(transparent 0, white 65%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, transparent), color-stop(55%, white));
+  background-image: linear-gradient(transparent 0, white 55%);
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   opacity: 1;
@@ -474,6 +479,7 @@ a, a:active, a:hover, a:visited {
   z-index: 300;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  padding: 5px 20px;
 }
 
 .container .descriptionSection .description.expanded {
@@ -584,6 +590,8 @@ a, a:active, a:hover, a:visited {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
+  background: transparent;
+  border: none;
 }
 
 .container .osListHeader .osListTitle button div {
@@ -723,11 +731,18 @@ a, a:active, a:hover, a:visited {
   margin: 0 auto;
 }
 
+.container .suggestedSection .suggestedSelector .button {
+  background: transparent;
+  border: none;
+}
+
 .container .suggestedSection .suggestedSelector .arrow {
   color: #003da3;
 }
 
 .container .suggestedSection .suggestedSelector .indicators {
+  background: transparent;
+  border: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
