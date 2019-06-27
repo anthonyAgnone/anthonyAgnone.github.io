@@ -234,6 +234,11 @@ var $allSections = $('.suggestedItems'),
   computedStyle = window.getComputedStyle(document.querySelector('.suggestedContainer')),
   matrix = new WebKitCSSMatrix(computedStyle.transform)
 
+/**
+ *
+ * Takes the amount of slides and adds a button/indicator for each representative state
+ *
+ **/
 function attachIndicators() {
   $allSections.each(function(i) {
     if (i == pos) {
@@ -244,6 +249,11 @@ function attachIndicators() {
   })
 }
 
+/**
+ *
+ * Adds an active or inactive state based on the position of the carousel
+ *
+ **/
 function colorIndicators() {
   $('.indicator').each(function(i, el) {
     $(el)
@@ -253,6 +263,12 @@ function colorIndicators() {
   })
 }
 
+/**
+ *
+ * @param {int} direction - This represents the direction of slide. Negative to move left, pos to move right
+ * Calls upon the current transform matrix of the suggestedContainer element and converts it to a string to pass into the element
+ *
+ **/
 function moveCarousel(direction) {
   matrix = matrix.translate(direction, 0)
   document.querySelector('.suggestedContainer').style.transform = matrix.toString()
@@ -260,9 +276,9 @@ function moveCarousel(direction) {
 
 /**
  *
- * The controls slide the carousel by the width of the parent (which is 100% width)
- * 105 due to padding when initializing the width of the container. Gives each indicator
- * a data position so you can track which slide to go to
+ * The controls slide the carousel by the width of the parent to reveal hidden items.
+ * the extra 20px makes up for the margin between elements.
+ * Then updates the indicators to reflect the current slide
  *
  **/
 function attachControls() {
